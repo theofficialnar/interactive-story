@@ -1,5 +1,6 @@
 package com.narcuenca.interactivestory;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,9 +23,19 @@ public class MainActivity extends AppCompatActivity {
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Get the value of the input field and start a new activity
                 String name = nameField.getText().toString();
-                Toast.makeText(MainActivity.this, name, Toast.LENGTH_LONG).show();
+                startStory(name);
             }
         });
+    }
+
+    // Starts a new activity
+    private void startStory(String name) {
+        // Create & start a new intent to launch a new activity
+        Intent intent = new Intent(this, StoryActivity.class);
+        // Add data into the intent
+        intent.putExtra("name", name);
+        startActivity(intent);
     }
 }
