@@ -1,9 +1,12 @@
-package com.narcuenca.interactivestory;
+package com.narcuenca.interactivestory.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.narcuenca.interactivestory.R;
+import com.narcuenca.interactivestory.model.Page;
 
 public class StoryActivity extends AppCompatActivity {
 

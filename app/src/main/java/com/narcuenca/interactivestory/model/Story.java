@@ -1,5 +1,7 @@
 package com.narcuenca.interactivestory.model;
 
+import com.narcuenca.interactivestory.R;
+
 public class Story {
     private Page[] pages;
 
