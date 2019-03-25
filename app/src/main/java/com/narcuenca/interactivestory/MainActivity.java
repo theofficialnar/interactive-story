@@ -1,6 +1,7 @@
 package com.narcuenca.interactivestory;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,8 +35,13 @@ public class MainActivity extends AppCompatActivity {
     private void startStory(String name) {
         // Create & start a new intent to launch a new activity
         Intent intent = new Intent(this, StoryActivity.class);
+
+        // Get string from resources
+        Resources resources = getResources();
+        String key = resources.getString(R.string.key_name);
+
         // Add data into the intent
-        intent.putExtra("name", name);
+        intent.putExtra(key, name);
         startActivity(intent);
     }
 }
