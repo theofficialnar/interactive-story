@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Clear the name input field
+        // when user click back
+        nameField.setText("");
+    }
+
     // Starts a new activity
     private void startStory(String name) {
         // Create & start a new intent to launch a new activity
